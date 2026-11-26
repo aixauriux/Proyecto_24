@@ -1,0 +1,191 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f1ff;
+    color: #624478;
+}
+
+main {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #9664bf;
+}
+
+.contenedor {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #dfc9ed;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+.contenedor p {
+    color: #a38ab5;
+}
+
+.historias {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.agregar,
+.historia {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.agregar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed #b58bd4;
+    color: #a574c7;
+    background: #f5eaff;
+    font-size: 38px;
+}
+
+.agregar:hover {
+    background: #ead5fa;
+}
+
+.historia {
+    border: 3px solid #b17bd3;
+    padding: 3px;
+    object-fit: cover;
+}
+
+#mensaje {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* VISOR DE HISTORIAS */
+
+.visor {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(30, 15, 40, 0.95);
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.contenido-visor {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 90vh;
+    background: #24172d;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#imagenHistoria {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.progresos {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    z-index: 2;
+}
+
+.barra {
+    height: 4px;
+    background: #ffffff66;
+    flex: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.relleno {
+    height: 100%;
+    width: 0;
+    background: white;
+}
+
+.cerrar,
+.anterior,
+.siguiente {
+    position: absolute;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background: #00000055;
+    z-index: 3;
+}
+
+.cerrar {
+    top: 28px;
+    right: 12px;
+    font-size: 22px;
+    background: transparent;
+}
+
+.anterior,
+.siguiente {
+    top: 50%;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.anterior {
+    left: 10px;
+}
+
+.siguiente {
+    right: 10px;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 10px auto;
+        padding: 12px;
+    }
+
+    .contenedor {
+        padding: 20px;
+    }
+
+    .agregar,
+    .historia {
+        width: 65px;
+        height: 65px;
+    }
+
+    .contenido-visor {
+        max-width: 100%;
+        height: 100dvh;
+        border-radius: 0;
+    }
+}

@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis historias 💜</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1>💜 Mis historias</h1>
+            <p>Comparte tus momentos favoritos</p>
+        </header>
+
+        <section class="contenedor">
+            <h2>Historias</h2>
+            <p>Desaparecen después de 24 horas ✨</p>
+
+            <section class="historias" id="historias">
+                <label for="imagen" class="agregar">+</label>
+                <input type="file" id="imagen" accept="image/*" hidden>
+            </section>
+
+            <p id="mensaje">Todavía no tienes historias 💕</p>
+        </section>
+
+        <section class="visor" id="visor">
+            <article class="contenido-visor">
+                <section class="progresos" id="progresos"></section>
+
+                <button class="cerrar" id="cerrar" aria-label="Cerrar historia">✕</button>
+
+                <img id="imagenHistoria" alt="Historia publicada">
+
+                <button class="anterior" id="anterior" aria-label="Historia anterior">❮</button>
+                <button class="siguiente" id="siguiente" aria-label="Historia siguiente">❯</button>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
